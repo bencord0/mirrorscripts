@@ -11,5 +11,7 @@ rsync -vaH --numeric-ids --delete --delete-after --delay-updates \
 # Packages
 mkdir -p "${CURRENT_DIR}/releases/20/Everything/x86_64/os/Packages"
 rsync -vaH --numeric-ids --delete --delete-after --delay-updates \
+    --include '*.x86_64.rpm' --include '*.noarch.rpm' \
+    --include '*/' --exclude '*' \
          "${BASEURL}releases/20/Everything/x86_64/os/Packages/" \
     "${CURRENT_DIR}/releases/20/Everything/x86_64/os/Packages"
