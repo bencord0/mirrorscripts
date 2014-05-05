@@ -4,7 +4,9 @@ BASEURL=rsync://mirrorservice.org/ftp.debian.org/debian/
 
 # Per-release repo metadata by recursive directory
 for dir in \
+    dists/stable/main/binary-all \
     dists/stable/main/binary-amd64 \
+    dists/stable/main/debian-installer/binary-all \
     dists/stable/main/debian-installer/binary-amd64 \
     dists/stable/main/installer-amd64/current \
     dists/stable/main/source/
