@@ -32,6 +32,7 @@ for dir in \
 do
     mkdir -p "${CURRENT_DIR}/$dir"
     rsync -vaH --numeric-ids --delete --delete-after --delay-updates \
+        --copy-unsafe-links \
          "${BASEURL}$dir/" \
     "${CURRENT_DIR}/$dir"
 done
