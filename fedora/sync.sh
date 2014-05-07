@@ -15,3 +15,9 @@ rsync -vaH --numeric-ids --delete --delete-after --delay-updates \
     --include '*/' --exclude '*' \
          "${BASEURL}releases/20/Everything/x86_64/os/Packages/" \
     "${CURRENT_DIR}/releases/20/Everything/x86_64/os/Packages"
+
+# Repodata
+mkdir -p "${CURRENT_DIR}/releases/20/Everything/x86_64/os/repodata"
+rsync -vaH --numeric-ids --delete --delete-after --delay-updates \
+         "${BASEURL}releases/20/Everything/x86_64/os/repodata/" \
+    "${CURRENT_DIR}/releases/20/Everything/x86_64/os/repodata"
